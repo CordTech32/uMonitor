@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> uMonitor | Add new URL</title>
+    <style>
+        input{
+            margin-top: 5px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+        {% include 'sidebar.html' %}
+<form action="/new" method="post">
+        <input name="name" placeholder="Friendly Name" max="100"><br>
+        <input name="website_uri" placeholder="Website URL" value="https://.de" max="100"><br>
+        <input name="query_text" placeholder="Search Website Response Text"><br>
+        <label for="use-custom-headers">Modify Request Headers</label>
+        <input type="checkbox" name="use-custom-headers" id="use-custom-headers" placeholder="Modify Headers"><br>
+        <label for="content-types">Content-Type</label>
+        <select name="content-type" id="content-types">
+            <option selected="selected" value="text/plain">Plain Text</option>
+            <option value="application/json">JSON</option>
+            <option value="text/xml">XML</option>
+            <option value="text/html">HTML</option>
+            <option value="application/x-www-form-urlencoded">X-WWW-Form UrlEncoded</option>
+        </select>
+        <label for="accept-charset">Accept-Charset</label>
+        <select name="accept-charset" id="accept-charset">
+            <option selected="selected" value="utf-8">UTF-8</option>
+            <option value="ascii">ASCII</option>
+            <option value="iscii">ISCII (Indian Languages)</option>
+            <option value="euc">EUC (Extended Unix Coding)</option>
+        </select>
+
+        <input type="submit">
+    </form>
+</body>
+</html>

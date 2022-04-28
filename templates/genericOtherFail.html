@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> uMonitor | Error</title>
+    <style>
+        input{
+            margin-top: 5px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        window.oncontextmenu = (e) => {
+            alert("Nothing to see here!")
+            return false
+        }
+    </script>
+</head>
+<body>
+        {% include 'sidebar.html' %}
+        <img src="https://http.cat/{{ error}}.jpg">
+        <details>
+            <summary>{{ http }}</summary>
+            <span>Traceback (Innermost last) <br>{{ http.with_traceback(http) }}</span>
+        </details>
+
+    <a href="/"><button>Return home</button></a>
+    <button onclick="history.back()">Go back one</button>
+</body>
+</html>

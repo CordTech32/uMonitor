@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Deletion</title>
+</head>
+<body>
+<script>
+
+    res = confirm("Do you really want to delete {{ page.name }}?\nThis Operation cannot be undone.")
+
+    if(res === true){
+        window.location.href = "/delete/{{ page.id }}/f"
+    }
+    else {
+        window.location.href = "/"
+    }
+</script>
+    {% include 'sidebar.html' %}
+
+
+
+</body>
+</html>

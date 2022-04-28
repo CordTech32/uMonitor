@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> uMonitor | Error</title>
+    <style>
+        input{
+            margin-top: 5px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+        {% include 'sidebar.html' %}
+<img src="https://http.cat/{{ error}}.jpg">
+    <h1>{{ http.code }} {{ http.name }}</h1>
+    <p>{{ http.description }}</p>
+        <details>
+            <summary>Details</summary>
+            <span>{{ error_formatted }}</span>
+        </details>
+    <a href="/"><button>Return home</button></a>
+    <button onclick="history.back()">Go back one</button>
+</body>
+</html>

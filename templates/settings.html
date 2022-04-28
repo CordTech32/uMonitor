@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> uMonitor | Super Secret Settings!</title>
+</head>
+<body>
+    {% include 'sidebar.html' %}
+    <form action="/supersecretsettings" method="post">
+        <label for="contextIsNav">RMB = Navbar</label>
+        <input type="checkbox" id="contextIsNav" checked="{{ session['rmbIsSidebar'] }}" name="contextIsNav">
+        <input type="submit">
+    </form>
+</body>
+</html>
